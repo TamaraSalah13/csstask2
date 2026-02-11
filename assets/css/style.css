@@ -1,47 +1,144 @@
+
 *{
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-.header{
-
-    display: flex;
-    gap:232.5px;
-    padding: 21.84px 0;
-    margin: 0 165px;
+img{
+    width: 100%;
+    display: block;
 }
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.header{
+    padding: 20px 0;
+}
+
+
+.logo img{
+    width: 120px; 
+}
+
 
 .list ul{
-    list-style-type: none;
     display: flex;
-    gap:60px;
+    gap: 60px;
 }
+
 
 .icons ul{
     display: flex;
-    gap:24px;
-    list-style-type: none;
+    gap: 24px;
 }
 
+
+.menu{
+    display: none; 
+    
+}
+
+.menu img{
+    width: 28px;
+}
+
+
 .collection{
-    display: flex;
-    flex-wrap: wrap;
-    gap:30px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin: 0 165px;
+    padding: 40px 0;
+}
+
+.collection .row{
+    gap: 30px;
 }
 
 .collection-item{
-
-    width:calc((100% - 90px) / 4);
+    width: calc((100% - 90px) / 4); 
     text-align: center;
 }
-img{
-    width: 100%;
+
+.collection-item h2{
+    margin-top: 20px;
+    font-size: 20px;
 }
 
-h2{
-    margin-top: 23px;
+@media (max-width: 992px){
+
+   
+    .list,
+    .icons{
+        display: none;
+    }
+
+   
+    .menu{
+        display: flex;
+    }
+
+    .collection-item{
+        width: calc((100% - 30px) / 2);
+    }
+}
+
+
+@media (max-width: 600px){
+
+    .container{
+        width: 90%;
+    }
+
+    .collection .row{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .collection-item{
+        width: 100%;
+    }
+
+    .collection-item h2{
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 320px){
+
+    .container{
+        width: 95%;
+    }
+
+    .collection .row{
+        gap: 15px;
+    }
+
+    .collection-item h2{
+        font-size: 16px;
+    }
+
+    .menu img{
+        width: 24px;
+    }
 }
